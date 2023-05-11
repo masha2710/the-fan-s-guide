@@ -1,3 +1,4 @@
+using the_fan_s_guide.Forms;
 namespace the_fan_s_guide
 {
     internal static class Program
@@ -11,7 +12,7 @@ namespace the_fan_s_guide
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
         }
     }
 }
