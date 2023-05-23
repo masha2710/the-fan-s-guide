@@ -21,13 +21,13 @@ namespace the_fan_s_guide.Models
                 var sportsman = new Sportsman
                 {
                     Name = "Name" + i,
-                    Сitizenship = "Country" + i,
+                    Citizenship = "Country" + i,
                     Nationality = "Nationality" + i,
-                    Height = i + "m",
+                    Height = 150 + i + "m",
                     Sport = "Sport" + i,
                     Team = "Team" + i,
                     PersonalRecord = "Record" + i,
-                    IsRecordsman = "no"
+                    Recordsman = "no"
                 };
                 Sportsmen.Add(sportsman);
             }

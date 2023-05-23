@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using the_fan_s_guide.Data;
 using the_fan_s_guide.Models;
 
 namespace the_fan_s_guide.Forms
@@ -19,11 +20,41 @@ namespace the_fan_s_guide.Forms
             InitializeComponent();
             sportbase = new SportBase();
             sportbase.TestData(100);
+
+            sportsmanBindingSource.DataSource = sportbase.Sportsmen;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataAccess.Save(sportbase);
+        }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DataAccess.Load(sportbase);
+            sportsmanBindingSource.ResetBindings(true);
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sportbase.Sportsmen.Clear();
+            sportsmanBindingSource.ResetBindings(true);
+        }
+
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new AddForm();
+            var dialogResult = form.ShowDialog();
+            if(dialogResult == DialogResult.OK)
+            {
+                sportbase.Sportsmen.Add(form.Sportsman);
+                sportsmanBindingSource.ResetBindings(true);
+            }
         }
     }
 }
