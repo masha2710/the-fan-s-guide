@@ -1,6 +1,6 @@
 ﻿namespace the_fan_s_guide.Forms
 {
-    partial class AddForm
+    partial class EditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.addformGroupBox = new System.Windows.Forms.GroupBox();
-            this.addNameTextBox = new System.Windows.Forms.TextBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
             this.addRecordsmanLabel = new System.Windows.Forms.Label();
@@ -40,13 +39,14 @@
             this.addNationalityLabel = new System.Windows.Forms.Label();
             this.addCitizenshipLabel = new System.Windows.Forms.Label();
             this.addNameLabel = new System.Windows.Forms.Label();
-            this.addRecordsmanTextBox = new System.Windows.Forms.TextBox();
-            this.addPersRecordTextBox = new System.Windows.Forms.TextBox();
-            this.addTeamTextBox = new System.Windows.Forms.TextBox();
-            this.addSportTextBox = new System.Windows.Forms.TextBox();
-            this.addNationalityTextBox = new System.Windows.Forms.TextBox();
-            this.addHeightTextBox = new System.Windows.Forms.TextBox();
-            this.addCitizenshipTextBox = new System.Windows.Forms.TextBox();
+            this.editRecordsmanTextBox = new System.Windows.Forms.TextBox();
+            this.editPersRecordTextBox = new System.Windows.Forms.TextBox();
+            this.editTeamTextBox = new System.Windows.Forms.TextBox();
+            this.editSportTextBox = new System.Windows.Forms.TextBox();
+            this.editNationalityTextBox = new System.Windows.Forms.TextBox();
+            this.editHeightTextBox = new System.Windows.Forms.TextBox();
+            this.editCitizenshipTextBox = new System.Windows.Forms.TextBox();
+            this.editNameTextBox = new System.Windows.Forms.TextBox();
             this.addformGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +55,6 @@
             this.addformGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.addformGroupBox.Controls.Add(this.addNameTextBox);
             this.addformGroupBox.Controls.Add(this.cancelButton);
             this.addformGroupBox.Controls.Add(this.okButton);
             this.addformGroupBox.Controls.Add(this.addRecordsmanLabel);
@@ -66,25 +65,19 @@
             this.addformGroupBox.Controls.Add(this.addNationalityLabel);
             this.addformGroupBox.Controls.Add(this.addCitizenshipLabel);
             this.addformGroupBox.Controls.Add(this.addNameLabel);
-            this.addformGroupBox.Controls.Add(this.addRecordsmanTextBox);
-            this.addformGroupBox.Controls.Add(this.addPersRecordTextBox);
-            this.addformGroupBox.Controls.Add(this.addTeamTextBox);
-            this.addformGroupBox.Controls.Add(this.addSportTextBox);
-            this.addformGroupBox.Controls.Add(this.addNationalityTextBox);
-            this.addformGroupBox.Controls.Add(this.addHeightTextBox);
-            this.addformGroupBox.Controls.Add(this.addCitizenshipTextBox);
-            this.addformGroupBox.Location = new System.Drawing.Point(12, 0);
+            this.addformGroupBox.Controls.Add(this.editRecordsmanTextBox);
+            this.addformGroupBox.Controls.Add(this.editPersRecordTextBox);
+            this.addformGroupBox.Controls.Add(this.editTeamTextBox);
+            this.addformGroupBox.Controls.Add(this.editSportTextBox);
+            this.addformGroupBox.Controls.Add(this.editNationalityTextBox);
+            this.addformGroupBox.Controls.Add(this.editHeightTextBox);
+            this.addformGroupBox.Controls.Add(this.editCitizenshipTextBox);
+            this.addformGroupBox.Controls.Add(this.editNameTextBox);
+            this.addformGroupBox.Location = new System.Drawing.Point(12, 1);
             this.addformGroupBox.Name = "addformGroupBox";
-            this.addformGroupBox.Size = new System.Drawing.Size(776, 438);
-            this.addformGroupBox.TabIndex = 0;
+            this.addformGroupBox.Size = new System.Drawing.Size(776, 437);
+            this.addformGroupBox.TabIndex = 1;
             this.addformGroupBox.TabStop = false;
-            // 
-            // addNameTextBox
-            // 
-            this.addNameTextBox.Location = new System.Drawing.Point(238, 36);
-            this.addNameTextBox.Name = "addNameTextBox";
-            this.addNameTextBox.Size = new System.Drawing.Size(456, 27);
-            this.addNameTextBox.TabIndex = 0;
             // 
             // cancelButton
             // 
@@ -178,63 +171,70 @@
             this.addNameLabel.TabIndex = 9;
             this.addNameLabel.Text = "Name";
             // 
-            // addRecordsmanTextBox
+            // editRecordsmanTextBox
             // 
-            this.addRecordsmanTextBox.Location = new System.Drawing.Point(238, 342);
-            this.addRecordsmanTextBox.Name = "addRecordsmanTextBox";
-            this.addRecordsmanTextBox.Size = new System.Drawing.Size(456, 27);
-            this.addRecordsmanTextBox.TabIndex = 7;
+            this.editRecordsmanTextBox.Location = new System.Drawing.Point(238, 342);
+            this.editRecordsmanTextBox.Name = "editRecordsmanTextBox";
+            this.editRecordsmanTextBox.Size = new System.Drawing.Size(456, 27);
+            this.editRecordsmanTextBox.TabIndex = 7;
             // 
-            // addPersRecordTextBox
+            // editPersRecordTextBox
             // 
-            this.addPersRecordTextBox.Location = new System.Drawing.Point(238, 295);
-            this.addPersRecordTextBox.Name = "addPersRecordTextBox";
-            this.addPersRecordTextBox.Size = new System.Drawing.Size(456, 27);
-            this.addPersRecordTextBox.TabIndex = 6;
+            this.editPersRecordTextBox.Location = new System.Drawing.Point(238, 295);
+            this.editPersRecordTextBox.Name = "editPersRecordTextBox";
+            this.editPersRecordTextBox.Size = new System.Drawing.Size(456, 27);
+            this.editPersRecordTextBox.TabIndex = 6;
             // 
-            // addTeamTextBox
+            // editTeamTextBox
             // 
-            this.addTeamTextBox.Location = new System.Drawing.Point(238, 253);
-            this.addTeamTextBox.Name = "addTeamTextBox";
-            this.addTeamTextBox.Size = new System.Drawing.Size(456, 27);
-            this.addTeamTextBox.TabIndex = 5;
+            this.editTeamTextBox.Location = new System.Drawing.Point(238, 253);
+            this.editTeamTextBox.Name = "editTeamTextBox";
+            this.editTeamTextBox.Size = new System.Drawing.Size(456, 27);
+            this.editTeamTextBox.TabIndex = 5;
             // 
-            // addSportTextBox
+            // editSportTextBox
             // 
-            this.addSportTextBox.Location = new System.Drawing.Point(238, 211);
-            this.addSportTextBox.Name = "addSportTextBox";
-            this.addSportTextBox.Size = new System.Drawing.Size(456, 27);
-            this.addSportTextBox.TabIndex = 4;
+            this.editSportTextBox.Location = new System.Drawing.Point(238, 211);
+            this.editSportTextBox.Name = "editSportTextBox";
+            this.editSportTextBox.Size = new System.Drawing.Size(456, 27);
+            this.editSportTextBox.TabIndex = 4;
             // 
-            // addNationalityTextBox
+            // editNationalityTextBox
             // 
-            this.addNationalityTextBox.Location = new System.Drawing.Point(238, 123);
-            this.addNationalityTextBox.Name = "addNationalityTextBox";
-            this.addNationalityTextBox.Size = new System.Drawing.Size(456, 27);
-            this.addNationalityTextBox.TabIndex = 2;
+            this.editNationalityTextBox.Location = new System.Drawing.Point(238, 123);
+            this.editNationalityTextBox.Name = "editNationalityTextBox";
+            this.editNationalityTextBox.Size = new System.Drawing.Size(456, 27);
+            this.editNationalityTextBox.TabIndex = 2;
             // 
-            // addHeightTextBox
+            // editHeightTextBox
             // 
-            this.addHeightTextBox.Location = new System.Drawing.Point(238, 165);
-            this.addHeightTextBox.Name = "addHeightTextBox";
-            this.addHeightTextBox.Size = new System.Drawing.Size(456, 27);
-            this.addHeightTextBox.TabIndex = 3;
+            this.editHeightTextBox.Location = new System.Drawing.Point(238, 165);
+            this.editHeightTextBox.Name = "editHeightTextBox";
+            this.editHeightTextBox.Size = new System.Drawing.Size(456, 27);
+            this.editHeightTextBox.TabIndex = 3;
             // 
-            // addCitizenshipTextBox
+            // editCitizenshipTextBox
             // 
-            this.addCitizenshipTextBox.Location = new System.Drawing.Point(238, 81);
-            this.addCitizenshipTextBox.Name = "addCitizenshipTextBox";
-            this.addCitizenshipTextBox.Size = new System.Drawing.Size(456, 27);
-            this.addCitizenshipTextBox.TabIndex = 1;
+            this.editCitizenshipTextBox.Location = new System.Drawing.Point(238, 81);
+            this.editCitizenshipTextBox.Name = "editCitizenshipTextBox";
+            this.editCitizenshipTextBox.Size = new System.Drawing.Size(456, 27);
+            this.editCitizenshipTextBox.TabIndex = 1;
             // 
-            // AddForm
+            // editNameTextBox
+            // 
+            this.editNameTextBox.Location = new System.Drawing.Point(238, 36);
+            this.editNameTextBox.Name = "editNameTextBox";
+            this.editNameTextBox.Size = new System.Drawing.Size(456, 27);
+            this.editNameTextBox.TabIndex = 0;
+            // 
+            // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.addformGroupBox);
-            this.Name = "AddForm";
-            this.Text = "AddForm";
+            this.Name = "EditForm";
+            this.Text = "EditForm";
             this.addformGroupBox.ResumeLayout(false);
             this.addformGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -244,23 +244,23 @@
         #endregion
 
         private GroupBox addformGroupBox;
-        private TextBox addCitizenshipTextBox;
-        private TextBox addHeightTextBox;
-        private TextBox addTeamTextBox;
-        private TextBox addSportTextBox;
-        private TextBox addNationalityTextBox;
-        private TextBox addRecordsmanTextBox;
-        private TextBox addPersRecordTextBox;
-        private Label addCitizenshipLabel;
-        private Label addNameLabel;
-        private Label addNationalityLabel;
+        private Button cancelButton;
+        private Button okButton;
         private Label addRecordsmanLabel;
         private Label addPersRecordLabel;
         private Label addTeamLabel;
         private Label addSportLabel;
         private Label addHeightLabel;
-        private Button cancelButton;
-        private Button okButton;
-        private TextBox addNameTextBox;
+        private Label addNationalityLabel;
+        private Label addCitizenshipLabel;
+        private Label addNameLabel;
+        private TextBox editRecordsmanTextBox;
+        private TextBox editPersRecordTextBox;
+        private TextBox editTeamTextBox;
+        private TextBox editSportTextBox;
+        private TextBox editNationalityTextBox;
+        private TextBox editHeightTextBox;
+        private TextBox editCitizenshipTextBox;
+        private TextBox editNameTextBox;
     }
 }

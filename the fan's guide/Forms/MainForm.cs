@@ -48,13 +48,33 @@ namespace the_fan_s_guide.Forms
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form = new AddForm();
+            var form = new AddForm(sportbase);
             var dialogResult = form.ShowDialog();
             if(dialogResult == DialogResult.OK)
             {
                 sportbase.Sportsmen.Add(form.Sportsman);
                 sportsmanBindingSource.ResetBindings(true);
             }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var selectedRow = sportsmanGridView.CurrentRow;
+            if (selectedRow == null)
+            {
+                return;
+            }
+            var selectedSportsman = selectedRow.DataBoundItem as Sportsman;
+            if (selectedSportsman == null)
+            {
+                return;
+            }
+            var form = new EditForm(selectedSportsman);
+            if(form.ShowDialog() == DialogResult.OK)
+            {
+                sportsmanBindingSource.ResetBindings(true);
+            }
+
         }
     }
 }

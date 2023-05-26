@@ -48,6 +48,7 @@
             this.teamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personalRecordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recordsmanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanGridView)).BeginInit();
@@ -112,7 +113,8 @@
             // sportsmenToolStripMenuItem
             // 
             this.sportsmenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToolStripMenuItem});
+            this.addToolStripMenuItem,
+            this.editToolStripMenuItem});
             this.sportsmenToolStripMenuItem.Name = "sportsmenToolStripMenuItem";
             this.sportsmenToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.sportsmenToolStripMenuItem.Text = "Sportsmen";
@@ -227,6 +229,13 @@
             this.recordsmanDataGridViewTextBoxColumn.ReadOnly = true;
             this.recordsmanDataGridViewTextBoxColumn.Width = 125;
             // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -269,5 +278,6 @@
         private DataGridViewTextBoxColumn teamDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn personalRecordDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn recordsmanDataGridViewTextBoxColumn;
+        private ToolStripMenuItem editToolStripMenuItem;
     }
 }

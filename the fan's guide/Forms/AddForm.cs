@@ -14,16 +14,16 @@ namespace the_fan_s_guide.Forms
     public partial class AddForm : Form
     {
         public Sportsman Sportsman;
+        SportBase _sportBase;
         public AddForm()
         {
             InitializeComponent();
         }
-
-        private void addNameTextBox_TextChanged(object sender, EventArgs e)
+        public AddForm(SportBase sportBase)
         {
-
+            InitializeComponent();
+            _sportBase = sportBase;
         }
-
         private void cancelButton_Click(object sender, EventArgs e)
         {
             this.DialogResult= DialogResult.Cancel;
