@@ -20,7 +20,6 @@ namespace the_fan_s_guide.Forms
             InitializeComponent();
             sportbase = new SportBase();
             sportbase.TestData(100);
-
             sportsmanBindingSource.DataSource = sportbase.Sportsmen;
         }
 
@@ -38,6 +37,7 @@ namespace the_fan_s_guide.Forms
         {
             DataAccess.Load(sportbase);
             sportsmanBindingSource.ResetBindings(true);
+            sportsmanBindingSource.DataSource = sportbase.Sportsmen;
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,11 +64,14 @@ namespace the_fan_s_guide.Forms
             {
                 return;
             }
+
             var selectedSportsman = selectedRow.DataBoundItem as Sportsman;
+
             if (selectedSportsman == null)
             {
                 return;
             }
+
             var form = new EditForm(selectedSportsman);
             if(form.ShowDialog() == DialogResult.OK)
             {

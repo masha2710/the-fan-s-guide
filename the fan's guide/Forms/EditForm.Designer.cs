@@ -31,22 +31,22 @@
             this.addformGroupBox = new System.Windows.Forms.GroupBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
-            this.addRecordsmanLabel = new System.Windows.Forms.Label();
-            this.addPersRecordLabel = new System.Windows.Forms.Label();
-            this.addTeamLabel = new System.Windows.Forms.Label();
-            this.addSportLabel = new System.Windows.Forms.Label();
-            this.addHeightLabel = new System.Windows.Forms.Label();
-            this.addNationalityLabel = new System.Windows.Forms.Label();
-            this.addCitizenshipLabel = new System.Windows.Forms.Label();
-            this.addNameLabel = new System.Windows.Forms.Label();
-            this.editRecordsmanTextBox = new System.Windows.Forms.TextBox();
-            this.editPersRecordTextBox = new System.Windows.Forms.TextBox();
-            this.editTeamTextBox = new System.Windows.Forms.TextBox();
-            this.editSportTextBox = new System.Windows.Forms.TextBox();
-            this.editNationalityTextBox = new System.Windows.Forms.TextBox();
-            this.editHeightTextBox = new System.Windows.Forms.TextBox();
-            this.editCitizenshipTextBox = new System.Windows.Forms.TextBox();
-            this.editNameTextBox = new System.Windows.Forms.TextBox();
+            this.recordsmanLabel = new System.Windows.Forms.Label();
+            this.persRecordLabel = new System.Windows.Forms.Label();
+            this.teamLabel = new System.Windows.Forms.Label();
+            this.sportLabel = new System.Windows.Forms.Label();
+            this.heightLabel = new System.Windows.Forms.Label();
+            this.nationalityLabel = new System.Windows.Forms.Label();
+            this.citizenshipLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.RecordsmanTextBox = new System.Windows.Forms.TextBox();
+            this.PersRecordTextBox = new System.Windows.Forms.TextBox();
+            this.TeamTextBox = new System.Windows.Forms.TextBox();
+            this.SportTextBox = new System.Windows.Forms.TextBox();
+            this.NationalityTextBox = new System.Windows.Forms.TextBox();
+            this.HeightTextBox = new System.Windows.Forms.TextBox();
+            this.CitizenshipTextBox = new System.Windows.Forms.TextBox();
+            this.NameTextBox = new System.Windows.Forms.TextBox();
             this.addformGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,22 +57,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.addformGroupBox.Controls.Add(this.cancelButton);
             this.addformGroupBox.Controls.Add(this.okButton);
-            this.addformGroupBox.Controls.Add(this.addRecordsmanLabel);
-            this.addformGroupBox.Controls.Add(this.addPersRecordLabel);
-            this.addformGroupBox.Controls.Add(this.addTeamLabel);
-            this.addformGroupBox.Controls.Add(this.addSportLabel);
-            this.addformGroupBox.Controls.Add(this.addHeightLabel);
-            this.addformGroupBox.Controls.Add(this.addNationalityLabel);
-            this.addformGroupBox.Controls.Add(this.addCitizenshipLabel);
-            this.addformGroupBox.Controls.Add(this.addNameLabel);
-            this.addformGroupBox.Controls.Add(this.editRecordsmanTextBox);
-            this.addformGroupBox.Controls.Add(this.editPersRecordTextBox);
-            this.addformGroupBox.Controls.Add(this.editTeamTextBox);
-            this.addformGroupBox.Controls.Add(this.editSportTextBox);
-            this.addformGroupBox.Controls.Add(this.editNationalityTextBox);
-            this.addformGroupBox.Controls.Add(this.editHeightTextBox);
-            this.addformGroupBox.Controls.Add(this.editCitizenshipTextBox);
-            this.addformGroupBox.Controls.Add(this.editNameTextBox);
+            this.addformGroupBox.Controls.Add(this.recordsmanLabel);
+            this.addformGroupBox.Controls.Add(this.persRecordLabel);
+            this.addformGroupBox.Controls.Add(this.teamLabel);
+            this.addformGroupBox.Controls.Add(this.sportLabel);
+            this.addformGroupBox.Controls.Add(this.heightLabel);
+            this.addformGroupBox.Controls.Add(this.nationalityLabel);
+            this.addformGroupBox.Controls.Add(this.citizenshipLabel);
+            this.addformGroupBox.Controls.Add(this.nameLabel);
+            this.addformGroupBox.Controls.Add(this.RecordsmanTextBox);
+            this.addformGroupBox.Controls.Add(this.PersRecordTextBox);
+            this.addformGroupBox.Controls.Add(this.TeamTextBox);
+            this.addformGroupBox.Controls.Add(this.SportTextBox);
+            this.addformGroupBox.Controls.Add(this.NationalityTextBox);
+            this.addformGroupBox.Controls.Add(this.HeightTextBox);
+            this.addformGroupBox.Controls.Add(this.CitizenshipTextBox);
+            this.addformGroupBox.Controls.Add(this.NameTextBox);
             this.addformGroupBox.Location = new System.Drawing.Point(12, 1);
             this.addformGroupBox.Name = "addformGroupBox";
             this.addformGroupBox.Size = new System.Drawing.Size(776, 437);
@@ -99,133 +99,133 @@
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // addRecordsmanLabel
+            // recordsmanLabel
             // 
-            this.addRecordsmanLabel.AutoSize = true;
-            this.addRecordsmanLabel.Location = new System.Drawing.Point(83, 349);
-            this.addRecordsmanLabel.Name = "addRecordsmanLabel";
-            this.addRecordsmanLabel.Size = new System.Drawing.Size(91, 20);
-            this.addRecordsmanLabel.TabIndex = 16;
-            this.addRecordsmanLabel.Text = "Recordsman";
+            this.recordsmanLabel.AutoSize = true;
+            this.recordsmanLabel.Location = new System.Drawing.Point(41, 349);
+            this.recordsmanLabel.Name = "recordsmanLabel";
+            this.recordsmanLabel.Size = new System.Drawing.Size(165, 20);
+            this.recordsmanLabel.TabIndex = 16;
+            this.recordsmanLabel.Text = "Recordsman (yes or no)";
             // 
-            // addPersRecordLabel
+            // persRecordLabel
             // 
-            this.addPersRecordLabel.AutoSize = true;
-            this.addPersRecordLabel.Location = new System.Drawing.Point(63, 302);
-            this.addPersRecordLabel.Name = "addPersRecordLabel";
-            this.addPersRecordLabel.Size = new System.Drawing.Size(111, 20);
-            this.addPersRecordLabel.TabIndex = 15;
-            this.addPersRecordLabel.Text = "Personal record";
+            this.persRecordLabel.AutoSize = true;
+            this.persRecordLabel.Location = new System.Drawing.Point(95, 302);
+            this.persRecordLabel.Name = "persRecordLabel";
+            this.persRecordLabel.Size = new System.Drawing.Size(111, 20);
+            this.persRecordLabel.TabIndex = 15;
+            this.persRecordLabel.Text = "Personal record";
             // 
-            // addTeamLabel
+            // teamLabel
             // 
-            this.addTeamLabel.AutoSize = true;
-            this.addTeamLabel.Location = new System.Drawing.Point(129, 260);
-            this.addTeamLabel.Name = "addTeamLabel";
-            this.addTeamLabel.Size = new System.Drawing.Size(45, 20);
-            this.addTeamLabel.TabIndex = 14;
-            this.addTeamLabel.Text = "Team";
+            this.teamLabel.AutoSize = true;
+            this.teamLabel.Location = new System.Drawing.Point(161, 260);
+            this.teamLabel.Name = "teamLabel";
+            this.teamLabel.Size = new System.Drawing.Size(45, 20);
+            this.teamLabel.TabIndex = 14;
+            this.teamLabel.Text = "Team";
             // 
-            // addSportLabel
+            // sportLabel
             // 
-            this.addSportLabel.AutoSize = true;
-            this.addSportLabel.Location = new System.Drawing.Point(79, 218);
-            this.addSportLabel.Name = "addSportLabel";
-            this.addSportLabel.Size = new System.Drawing.Size(95, 20);
-            this.addSportLabel.TabIndex = 13;
-            this.addSportLabel.Text = "Kind of sport";
+            this.sportLabel.AutoSize = true;
+            this.sportLabel.Location = new System.Drawing.Point(111, 218);
+            this.sportLabel.Name = "sportLabel";
+            this.sportLabel.Size = new System.Drawing.Size(95, 20);
+            this.sportLabel.TabIndex = 13;
+            this.sportLabel.Text = "Kind of sport";
             // 
-            // addHeightLabel
+            // heightLabel
             // 
-            this.addHeightLabel.AutoSize = true;
-            this.addHeightLabel.Location = new System.Drawing.Point(120, 172);
-            this.addHeightLabel.Name = "addHeightLabel";
-            this.addHeightLabel.Size = new System.Drawing.Size(54, 20);
-            this.addHeightLabel.TabIndex = 12;
-            this.addHeightLabel.Text = "Height";
+            this.heightLabel.AutoSize = true;
+            this.heightLabel.Location = new System.Drawing.Point(125, 172);
+            this.heightLabel.Name = "heightLabel";
+            this.heightLabel.Size = new System.Drawing.Size(81, 20);
+            this.heightLabel.TabIndex = 12;
+            this.heightLabel.Text = "Height (m)";
             // 
-            // addNationalityLabel
+            // nationalityLabel
             // 
-            this.addNationalityLabel.AutoSize = true;
-            this.addNationalityLabel.Location = new System.Drawing.Point(92, 130);
-            this.addNationalityLabel.Name = "addNationalityLabel";
-            this.addNationalityLabel.Size = new System.Drawing.Size(82, 20);
-            this.addNationalityLabel.TabIndex = 11;
-            this.addNationalityLabel.Text = "Nationality";
+            this.nationalityLabel.AutoSize = true;
+            this.nationalityLabel.Location = new System.Drawing.Point(124, 130);
+            this.nationalityLabel.Name = "nationalityLabel";
+            this.nationalityLabel.Size = new System.Drawing.Size(82, 20);
+            this.nationalityLabel.TabIndex = 11;
+            this.nationalityLabel.Text = "Nationality";
             // 
-            // addCitizenshipLabel
+            // citizenshipLabel
             // 
-            this.addCitizenshipLabel.AutoSize = true;
-            this.addCitizenshipLabel.Location = new System.Drawing.Point(93, 88);
-            this.addCitizenshipLabel.Name = "addCitizenshipLabel";
-            this.addCitizenshipLabel.Size = new System.Drawing.Size(81, 20);
-            this.addCitizenshipLabel.TabIndex = 10;
-            this.addCitizenshipLabel.Text = "Citizenship";
+            this.citizenshipLabel.AutoSize = true;
+            this.citizenshipLabel.Location = new System.Drawing.Point(125, 88);
+            this.citizenshipLabel.Name = "citizenshipLabel";
+            this.citizenshipLabel.Size = new System.Drawing.Size(81, 20);
+            this.citizenshipLabel.TabIndex = 10;
+            this.citizenshipLabel.Text = "Citizenship";
             // 
-            // addNameLabel
+            // nameLabel
             // 
-            this.addNameLabel.AutoSize = true;
-            this.addNameLabel.Location = new System.Drawing.Point(125, 43);
-            this.addNameLabel.Name = "addNameLabel";
-            this.addNameLabel.Size = new System.Drawing.Size(49, 20);
-            this.addNameLabel.TabIndex = 9;
-            this.addNameLabel.Text = "Name";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(157, 43);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(49, 20);
+            this.nameLabel.TabIndex = 9;
+            this.nameLabel.Text = "Name";
             // 
-            // editRecordsmanTextBox
+            // RecordsmanTextBox
             // 
-            this.editRecordsmanTextBox.Location = new System.Drawing.Point(238, 342);
-            this.editRecordsmanTextBox.Name = "editRecordsmanTextBox";
-            this.editRecordsmanTextBox.Size = new System.Drawing.Size(456, 27);
-            this.editRecordsmanTextBox.TabIndex = 7;
+            this.RecordsmanTextBox.Location = new System.Drawing.Point(238, 342);
+            this.RecordsmanTextBox.Name = "RecordsmanTextBox";
+            this.RecordsmanTextBox.Size = new System.Drawing.Size(456, 27);
+            this.RecordsmanTextBox.TabIndex = 7;
             // 
-            // editPersRecordTextBox
+            // PersRecordTextBox
             // 
-            this.editPersRecordTextBox.Location = new System.Drawing.Point(238, 295);
-            this.editPersRecordTextBox.Name = "editPersRecordTextBox";
-            this.editPersRecordTextBox.Size = new System.Drawing.Size(456, 27);
-            this.editPersRecordTextBox.TabIndex = 6;
+            this.PersRecordTextBox.Location = new System.Drawing.Point(238, 295);
+            this.PersRecordTextBox.Name = "PersRecordTextBox";
+            this.PersRecordTextBox.Size = new System.Drawing.Size(456, 27);
+            this.PersRecordTextBox.TabIndex = 6;
             // 
-            // editTeamTextBox
+            // TeamTextBox
             // 
-            this.editTeamTextBox.Location = new System.Drawing.Point(238, 253);
-            this.editTeamTextBox.Name = "editTeamTextBox";
-            this.editTeamTextBox.Size = new System.Drawing.Size(456, 27);
-            this.editTeamTextBox.TabIndex = 5;
+            this.TeamTextBox.Location = new System.Drawing.Point(238, 253);
+            this.TeamTextBox.Name = "TeamTextBox";
+            this.TeamTextBox.Size = new System.Drawing.Size(456, 27);
+            this.TeamTextBox.TabIndex = 5;
             // 
-            // editSportTextBox
+            // SportTextBox
             // 
-            this.editSportTextBox.Location = new System.Drawing.Point(238, 211);
-            this.editSportTextBox.Name = "editSportTextBox";
-            this.editSportTextBox.Size = new System.Drawing.Size(456, 27);
-            this.editSportTextBox.TabIndex = 4;
+            this.SportTextBox.Location = new System.Drawing.Point(238, 211);
+            this.SportTextBox.Name = "SportTextBox";
+            this.SportTextBox.Size = new System.Drawing.Size(456, 27);
+            this.SportTextBox.TabIndex = 4;
             // 
-            // editNationalityTextBox
+            // NationalityTextBox
             // 
-            this.editNationalityTextBox.Location = new System.Drawing.Point(238, 123);
-            this.editNationalityTextBox.Name = "editNationalityTextBox";
-            this.editNationalityTextBox.Size = new System.Drawing.Size(456, 27);
-            this.editNationalityTextBox.TabIndex = 2;
+            this.NationalityTextBox.Location = new System.Drawing.Point(238, 123);
+            this.NationalityTextBox.Name = "NationalityTextBox";
+            this.NationalityTextBox.Size = new System.Drawing.Size(456, 27);
+            this.NationalityTextBox.TabIndex = 2;
             // 
-            // editHeightTextBox
+            // HeightTextBox
             // 
-            this.editHeightTextBox.Location = new System.Drawing.Point(238, 165);
-            this.editHeightTextBox.Name = "editHeightTextBox";
-            this.editHeightTextBox.Size = new System.Drawing.Size(456, 27);
-            this.editHeightTextBox.TabIndex = 3;
+            this.HeightTextBox.Location = new System.Drawing.Point(238, 165);
+            this.HeightTextBox.Name = "HeightTextBox";
+            this.HeightTextBox.Size = new System.Drawing.Size(456, 27);
+            this.HeightTextBox.TabIndex = 3;
             // 
-            // editCitizenshipTextBox
+            // CitizenshipTextBox
             // 
-            this.editCitizenshipTextBox.Location = new System.Drawing.Point(238, 81);
-            this.editCitizenshipTextBox.Name = "editCitizenshipTextBox";
-            this.editCitizenshipTextBox.Size = new System.Drawing.Size(456, 27);
-            this.editCitizenshipTextBox.TabIndex = 1;
+            this.CitizenshipTextBox.Location = new System.Drawing.Point(238, 81);
+            this.CitizenshipTextBox.Name = "CitizenshipTextBox";
+            this.CitizenshipTextBox.Size = new System.Drawing.Size(456, 27);
+            this.CitizenshipTextBox.TabIndex = 1;
             // 
-            // editNameTextBox
+            // NameTextBox
             // 
-            this.editNameTextBox.Location = new System.Drawing.Point(238, 36);
-            this.editNameTextBox.Name = "editNameTextBox";
-            this.editNameTextBox.Size = new System.Drawing.Size(456, 27);
-            this.editNameTextBox.TabIndex = 0;
+            this.NameTextBox.Location = new System.Drawing.Point(238, 36);
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.Size = new System.Drawing.Size(456, 27);
+            this.NameTextBox.TabIndex = 0;
             // 
             // EditForm
             // 
@@ -246,21 +246,21 @@
         private GroupBox addformGroupBox;
         private Button cancelButton;
         private Button okButton;
-        private Label addRecordsmanLabel;
-        private Label addPersRecordLabel;
-        private Label addTeamLabel;
-        private Label addSportLabel;
-        private Label addHeightLabel;
-        private Label addNationalityLabel;
-        private Label addCitizenshipLabel;
-        private Label addNameLabel;
-        private TextBox editRecordsmanTextBox;
-        private TextBox editPersRecordTextBox;
-        private TextBox editTeamTextBox;
-        private TextBox editSportTextBox;
-        private TextBox editNationalityTextBox;
-        private TextBox editHeightTextBox;
-        private TextBox editCitizenshipTextBox;
-        private TextBox editNameTextBox;
+        private Label recordsmanLabel;
+        private Label persRecordLabel;
+        private Label teamLabel;
+        private Label sportLabel;
+        private Label heightLabel;
+        private Label nationalityLabel;
+        private Label citizenshipLabel;
+        private Label nameLabel;
+        private TextBox RecordsmanTextBox;
+        private TextBox PersRecordTextBox;
+        private TextBox TeamTextBox;
+        private TextBox SportTextBox;
+        private TextBox NationalityTextBox;
+        private TextBox HeightTextBox;
+        private TextBox CitizenshipTextBox;
+        private TextBox NameTextBox;
     }
 }

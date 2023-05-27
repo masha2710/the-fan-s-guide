@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using the_fan_s_guide.Forms_Validation;
 using the_fan_s_guide.Models;
 
 namespace the_fan_s_guide.Forms
@@ -31,18 +32,25 @@ namespace the_fan_s_guide.Forms
 
         private void okButton_Click(object sender, EventArgs e)
         {
+            string problemMessage = FieldsValidation.GetProblemMessage(NameTextBox.Text, CitizenshipTextBox.Text, NationalityTextBox.Text, HeightTextBox.Text, SportTextBox.Text, TeamTextBox.Text, PersRecordTextBox.Text, RecordsmanTextBox.Text);
+            if (problemMessage != "")
+            {
+                MessageBox.Show(problemMessage, "Problems:");
+                return;
+            }
             Sportsman = new Sportsman()
             {
-                Name = addNameTextBox.Text,
-                Citizenship = addCitizenshipTextBox.Text,
-                Nationality = addNationalityTextBox.Text,
-                Height = addHeightTextBox.Text,
-                Sport = addHeightTextBox.Text,
-                Team = addTeamTextBox.Text,
-                PersonalRecord = addPersRecordTextBox.Text,
-                Recordsman = addRecordsmanTextBox.Text,
+                Name = NameTextBox.Text,
+                Citizenship = CitizenshipTextBox.Text,
+                Nationality = NationalityTextBox.Text,
+                Height = HeightTextBox.Text,
+                Sport = SportTextBox.Text,
+                Team = TeamTextBox.Text,
+                PersonalRecord = PersRecordTextBox.Text,
+                Recordsman = RecordsmanTextBox.Text,
             };
-            this.DialogResult= DialogResult.OK;
+            this.DialogResult = DialogResult.OK;
         }
+
     }
 }

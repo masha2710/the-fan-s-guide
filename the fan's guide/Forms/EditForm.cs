@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using the_fan_s_guide.Forms_Validation;
 using the_fan_s_guide.Models;
 
 namespace the_fan_s_guide.Forms
@@ -22,26 +23,32 @@ namespace the_fan_s_guide.Forms
         {
             InitializeComponent();
             Sportsman = sportsman;
-            editNameTextBox.Text = sportsman.Name;
-            editCitizenshipTextBox.Text = sportsman.Citizenship;
-            editNationalityTextBox.Text = sportsman.Nationality;
-            editHeightTextBox.Text = sportsman.Height;
-            editSportTextBox.Text = sportsman.Sport;
-            editTeamTextBox.Text = sportsman.Team;
-            editPersRecordTextBox.Text = sportsman.PersonalRecord;
-            editRecordsmanTextBox.Text = sportsman.Recordsman;
+            NameTextBox.Text = sportsman.Name;
+            CitizenshipTextBox.Text = sportsman.Citizenship;
+            NationalityTextBox.Text = sportsman.Nationality;
+            HeightTextBox.Text = sportsman.Height;
+            SportTextBox.Text = sportsman.Sport;
+            TeamTextBox.Text = sportsman.Team;
+            PersRecordTextBox.Text = sportsman.PersonalRecord;
+            RecordsmanTextBox.Text = sportsman.Recordsman;
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            Sportsman.Name = editNameTextBox.Text;
-            Sportsman.Citizenship = editCitizenshipTextBox.Text;
-            Sportsman.Nationality = editNationalityTextBox.Text;
-            Sportsman.Height = editHeightTextBox.Text;
-            Sportsman.Sport = editHeightTextBox.Text;
-            Sportsman.Team = editTeamTextBox.Text;
-            Sportsman.PersonalRecord = editPersRecordTextBox.Text;
-            Sportsman.Recordsman = editRecordsmanTextBox.Text;
+            string problemMessage = FieldsValidation.GetProblemMessage(NameTextBox.Text, CitizenshipTextBox.Text, NationalityTextBox.Text, HeightTextBox.Text, SportTextBox.Text, TeamTextBox.Text, PersRecordTextBox.Text, RecordsmanTextBox.Text);
+            if (problemMessage != "")
+            {
+                MessageBox.Show(problemMessage, "Problems:");
+                return;
+            }
+            Sportsman.Name = NameTextBox.Text;
+            Sportsman.Citizenship = CitizenshipTextBox.Text;
+            Sportsman.Nationality = NationalityTextBox.Text;
+            Sportsman.Height = HeightTextBox.Text;
+            Sportsman.Sport = SportTextBox.Text;
+            Sportsman.Team = TeamTextBox.Text;
+            Sportsman.PersonalRecord = PersRecordTextBox.Text;
+            Sportsman.Recordsman = RecordsmanTextBox.Text;
             DialogResult= DialogResult.OK;
         }
 
