@@ -8,7 +8,8 @@ namespace the_fan_s_guide.Models
 {
     public class Sportsman
     {
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set;}
         public string Citizenship { get; set; }
         public string Nationality { get; set; }
         public string Height { get; set; }

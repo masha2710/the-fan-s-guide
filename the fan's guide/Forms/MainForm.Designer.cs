@@ -38,9 +38,11 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sportsmanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sportsmanGridView = new System.Windows.Forms.DataGridView();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.citizenshipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nationalityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.heightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +50,6 @@
             this.teamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personalRecordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recordsmanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanGridView)).BeginInit();
@@ -122,9 +123,16 @@
             // addToolStripMenuItem
             // 
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // sportsmanBindingSource
             // 
@@ -140,7 +148,8 @@
             this.sportsmanGridView.AutoGenerateColumns = false;
             this.sportsmanGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sportsmanGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
             this.citizenshipDataGridViewTextBoxColumn,
             this.nationalityDataGridViewTextBoxColumn,
             this.heightDataGridViewTextBoxColumn,
@@ -149,22 +158,31 @@
             this.personalRecordDataGridViewTextBoxColumn,
             this.recordsmanDataGridViewTextBoxColumn});
             this.sportsmanGridView.DataSource = this.sportsmanBindingSource;
-            this.sportsmanGridView.Location = new System.Drawing.Point(12, 195);
+            this.sportsmanGridView.Location = new System.Drawing.Point(0, 183);
             this.sportsmanGridView.Name = "sportsmanGridView";
             this.sportsmanGridView.ReadOnly = true;
             this.sportsmanGridView.RowHeadersWidth = 51;
             this.sportsmanGridView.RowTemplate.Height = 29;
-            this.sportsmanGridView.Size = new System.Drawing.Size(792, 244);
+            this.sportsmanGridView.Size = new System.Drawing.Size(816, 265);
             this.sportsmanGridView.TabIndex = 1;
             // 
-            // nameDataGridViewTextBoxColumn
+            // firstNameDataGridViewTextBoxColumn
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 125;
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.firstNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lastNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // citizenshipDataGridViewTextBoxColumn
             // 
@@ -229,13 +247,6 @@
             this.recordsmanDataGridViewTextBoxColumn.ReadOnly = true;
             this.recordsmanDataGridViewTextBoxColumn.Width = 125;
             // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -269,8 +280,11 @@
         private DataGridViewTextBoxColumn isRecordsmanDataGridViewTextBoxColumn;
         private ToolStripMenuItem sportsmenToolStripMenuItem;
         private ToolStripMenuItem addToolStripMenuItem;
-        private DataGridView sportsmanGridView;
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private DataGridView sportsmanGridView;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn citizenshipDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn nationalityDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn heightDataGridViewTextBoxColumn;
@@ -278,6 +292,5 @@
         private DataGridViewTextBoxColumn teamDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn personalRecordDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn recordsmanDataGridViewTextBoxColumn;
-        private ToolStripMenuItem editToolStripMenuItem;
     }
 }

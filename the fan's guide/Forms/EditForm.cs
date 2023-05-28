@@ -23,32 +23,33 @@ namespace the_fan_s_guide.Forms
         {
             InitializeComponent();
             Sportsman = sportsman;
-            NameTextBox.Text = sportsman.Name;
-            CitizenshipTextBox.Text = sportsman.Citizenship;
-            NationalityTextBox.Text = sportsman.Nationality;
-            HeightTextBox.Text = sportsman.Height;
-            SportTextBox.Text = sportsman.Sport;
-            TeamTextBox.Text = sportsman.Team;
-            PersRecordTextBox.Text = sportsman.PersonalRecord;
-            RecordsmanTextBox.Text = sportsman.Recordsman;
+            firstNameTextBox.Text = sportsman.FirstName;
+            citizenshipTextBox.Text = sportsman.Citizenship;
+            nationalityTextBox.Text = sportsman.Nationality;
+            heightTextBox.Text = sportsman.Height;
+            sportTextBox.Text = sportsman.Sport;
+            teamTextBox.Text = sportsman.Team;
+            persRecordTextBox.Text = sportsman.PersonalRecord;
+            recordsmanTextBox.Text = sportsman.Recordsman;
         }
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            string problemMessage = FieldsValidation.GetProblemMessage(NameTextBox.Text, CitizenshipTextBox.Text, NationalityTextBox.Text, HeightTextBox.Text, SportTextBox.Text, TeamTextBox.Text, PersRecordTextBox.Text, RecordsmanTextBox.Text);
+            string problemMessage = FieldsValidation.GetProblemMessage(firstNameTextBox.Text, lastNameTextBox.Text, citizenshipTextBox.Text, nationalityTextBox.Text, heightTextBox.Text, sportTextBox.Text, recordsmanTextBox.Text);
             if (problemMessage != "")
             {
                 MessageBox.Show(problemMessage, "Problems:");
                 return;
             }
-            Sportsman.Name = NameTextBox.Text;
-            Sportsman.Citizenship = CitizenshipTextBox.Text;
-            Sportsman.Nationality = NationalityTextBox.Text;
-            Sportsman.Height = HeightTextBox.Text;
-            Sportsman.Sport = SportTextBox.Text;
-            Sportsman.Team = TeamTextBox.Text;
-            Sportsman.PersonalRecord = PersRecordTextBox.Text;
-            Sportsman.Recordsman = RecordsmanTextBox.Text;
+            Sportsman.FirstName = firstNameTextBox.Text;
+            Sportsman.LastName = lastNameTextBox.Text;
+            Sportsman.Citizenship = citizenshipTextBox.Text;
+            Sportsman.Nationality = nationalityTextBox.Text;
+            Sportsman.Height = heightTextBox.Text;
+            Sportsman.Sport = sportTextBox.Text;
+            Sportsman.Team = teamTextBox.Text;
+            Sportsman.PersonalRecord = persRecordTextBox.Text;
+            Sportsman.Recordsman = recordsmanTextBox.Text;
             DialogResult= DialogResult.OK;
         }
 

@@ -20,7 +20,8 @@ namespace the_fan_s_guide.Models
             {
                 var sportsman = new Sportsman
                 {
-                    Name = "Name" + i,
+                    FirstName = "First Name" + i,
+                    LastName = "Last Name" + i,
                     Citizenship = "Country" + i,
                     Nationality = "Nationality" + i,
                     Height = 150 + i + "m",

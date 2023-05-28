@@ -8,13 +8,18 @@ namespace the_fan_s_guide.Forms_Validation
 {
     public static class FieldsValidation
     {
-       public static string GetProblemMessage(string name, string citizenship, string nationality, string height, string sport, string team, string persRecord, string recordsman)
+       public static string GetProblemMessage(string firstName, string lastName, string citizenship, string nationality, string height, string sport, string recordsman)
         {
             var problemMessage = "";
-            if(string.IsNullOrEmpty(name) || !OnlyLetters(name))
+            if(string.IsNullOrEmpty(firstName) || !OnlyLetters(firstName))
             {
-                problemMessage += "Name cannot be empty and must contain only letters!.\n";
+                problemMessage += "First name cannot be empty and must contain only letters!.\n";
             }
+            if (string.IsNullOrEmpty(lastName) || !OnlyLetters(lastName))
+            {
+                problemMessage += "Last name cannot be empty and must contain only letters!.\n";
+            }
+
             if (string.IsNullOrEmpty(citizenship) || !OnlyLetters(citizenship))
             {
                 problemMessage += "Citizenship cannot be empty and must contain only letters!\n";
@@ -34,11 +39,6 @@ namespace the_fan_s_guide.Forms_Validation
             if (string.IsNullOrEmpty(sport) || !OnlyLetters(sport))
             {
                 problemMessage += "Kind of sport cannot be empty and must contain only letters!\n";
-            }
-
-            if (string.IsNullOrEmpty(persRecord))
-            {
-                problemMessage += "Personal record cannot be empty and must contain only letters!\n";
             }
 
             if (string.IsNullOrEmpty(recordsman) || !YesorNo(recordsman))

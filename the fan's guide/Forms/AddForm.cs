@@ -32,7 +32,7 @@ namespace the_fan_s_guide.Forms
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            string problemMessage = FieldsValidation.GetProblemMessage(NameTextBox.Text, CitizenshipTextBox.Text, NationalityTextBox.Text, HeightTextBox.Text, SportTextBox.Text, TeamTextBox.Text, PersRecordTextBox.Text, RecordsmanTextBox.Text);
+            string problemMessage = FieldsValidation.GetProblemMessage(firstNameTextBox.Text, lastNameTextBox.Text, citizenshipTextBox.Text, nationalityTextBox.Text, heightTextBox.Text, sportTextBox.Text, recordsmanTextBox.Text);
             if (problemMessage != "")
             {
                 MessageBox.Show(problemMessage, "Problems:");
@@ -40,17 +40,19 @@ namespace the_fan_s_guide.Forms
             }
             Sportsman = new Sportsman()
             {
-                Name = NameTextBox.Text,
-                Citizenship = CitizenshipTextBox.Text,
-                Nationality = NationalityTextBox.Text,
-                Height = HeightTextBox.Text,
-                Sport = SportTextBox.Text,
-                Team = TeamTextBox.Text,
-                PersonalRecord = PersRecordTextBox.Text,
-                Recordsman = RecordsmanTextBox.Text,
+                FirstName = firstNameTextBox.Text,
+                LastName = lastNameTextBox.Text,
+                Citizenship = citizenshipTextBox.Text,
+                Nationality = nationalityTextBox.Text,
+                Height = heightTextBox.Text,
+                Sport = sportTextBox.Text,
+                Team = teamTextBox.Text,
+                PersonalRecord = persRecordTextBox.Text,
+                Recordsman = recordsmanTextBox.Text,
             };
             this.DialogResult = DialogResult.OK;
         }
+
 
     }
 }
