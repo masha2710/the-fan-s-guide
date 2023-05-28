@@ -21,11 +21,11 @@ namespace the_fan_s_guide.Models
             {
                 var sportsman = new Sportsman
                 {
-                    FirstName = "First Name" + i,
-                    LastName = "Last Name" + i,
+                    FirstName = "First" + i,
+                    LastName = "Last" + i,
                     Citizenship = "Country" + i,
                     Nationality = "Nationality" + i,
-                    Height = 150 + i + "m",
+                    Height = 150 + i +"cm",
                     Sport = "Sport" + i,
                     Team = "Team" + i,
                     PersonalRecord = "Record" + i,
@@ -34,6 +34,19 @@ namespace the_fan_s_guide.Models
                 Sportsmen.Add(sportsman);
             }
             Changed = true;
+        }
+
+        internal List<Sportsman> SearchSportsmen(string text)
+        {
+            List<Sportsman> res = new List<Sportsman>();
+            foreach (Sportsman sportsman in Sportsmen)
+            {
+                if (sportsman.FirstName.ToLower().IndexOf(text.ToLower()) > -1 || sportsman.LastName.ToLower().IndexOf(text.ToLower()) > -1 || sportsman.Sport.ToLower().IndexOf(text.ToLower()) > -1)
+                {
+                    res.Add(sportsman);
+                }
+            }
+            return res;
         }
     } 
 }

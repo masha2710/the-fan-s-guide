@@ -24,6 +24,7 @@ namespace the_fan_s_guide.Forms
             InitializeComponent();
             Sportsman = sportsman;
             firstNameTextBox.Text = sportsman.FirstName;
+            lastNameTextBox.Text = sportsman.LastName;
             citizenshipTextBox.Text = sportsman.Citizenship;
             nationalityTextBox.Text = sportsman.Nationality;
             heightTextBox.Text = sportsman.Height;
@@ -33,7 +34,7 @@ namespace the_fan_s_guide.Forms
             recordsmanTextBox.Text = sportsman.Recordsman;
         }
 
-        private void okButton_Click(object sender, EventArgs e)
+        private void okButton_Click_1(object sender, EventArgs e)
         {
             string problemMessage = FieldsValidation.GetProblemMessage(firstNameTextBox.Text, lastNameTextBox.Text, citizenshipTextBox.Text, nationalityTextBox.Text, heightTextBox.Text, sportTextBox.Text, recordsmanTextBox.Text);
             if (problemMessage != "")
@@ -50,12 +51,12 @@ namespace the_fan_s_guide.Forms
             Sportsman.Team = teamTextBox.Text;
             Sportsman.PersonalRecord = persRecordTextBox.Text;
             Sportsman.Recordsman = recordsmanTextBox.Text;
-            DialogResult= DialogResult.OK;
+            DialogResult = DialogResult.OK;
         }
 
-        private void cancelButton_Click(object sender, EventArgs e)
+        private void cancelButton_Click_1(object sender, EventArgs e)
         {
-            DialogResult= DialogResult.Cancel;
+            DialogResult = DialogResult.Cancel;
         }
     }
 }

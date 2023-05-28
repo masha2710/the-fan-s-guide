@@ -50,9 +50,13 @@
             this.teamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personalRecordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recordsmanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchGroupBox = new System.Windows.Forms.GroupBox();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanGridView)).BeginInit();
+            this.searchGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -64,7 +68,7 @@
             this.sportsmenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(816, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(816, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,40 +80,47 @@
             this.clearToolStripMenuItem,
             this.toolStripMenuItem1,
             this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 27);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // saveToolStripMenuItem
             // 
+            this.saveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
+            this.loadToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // clearToolStripMenuItem
             // 
+            this.clearToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(221, 6);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -118,21 +129,24 @@
             this.sportsmenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
             this.editToolStripMenuItem});
+            this.sportsmenToolStripMenuItem.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.sportsmenToolStripMenuItem.Name = "sportsmenToolStripMenuItem";
-            this.sportsmenToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.sportsmenToolStripMenuItem.Size = new System.Drawing.Size(106, 27);
             this.sportsmenToolStripMenuItem.Text = "Sportsmen";
             // 
             // addToolStripMenuItem
             // 
+            this.addToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
+            this.editToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -148,6 +162,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sportsmanGridView.AutoGenerateColumns = false;
+            this.sportsmanGridView.BackgroundColor = System.Drawing.Color.White;
             this.sportsmanGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sportsmanGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.firstNameDataGridViewTextBoxColumn,
@@ -166,7 +181,7 @@
             this.sportsmanGridView.RowHeadersWidth = 51;
             this.sportsmanGridView.RowTemplate.Height = 29;
             this.sportsmanGridView.Size = new System.Drawing.Size(816, 265);
-            this.sportsmanGridView.TabIndex = 1;
+            this.sportsmanGridView.TabIndex = 2;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
@@ -249,12 +264,45 @@
             this.recordsmanDataGridViewTextBoxColumn.ReadOnly = true;
             this.recordsmanDataGridViewTextBoxColumn.Width = 125;
             // 
+            // searchGroupBox
+            // 
+            this.searchGroupBox.Controls.Add(this.searchButton);
+            this.searchGroupBox.Controls.Add(this.searchTextBox);
+            this.searchGroupBox.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.searchGroupBox.Location = new System.Drawing.Point(19, 43);
+            this.searchGroupBox.Name = "searchGroupBox";
+            this.searchGroupBox.Size = new System.Drawing.Size(535, 125);
+            this.searchGroupBox.TabIndex = 3;
+            this.searchGroupBox.TabStop = false;
+            this.searchGroupBox.Text = "Search ";
+            // 
+            // searchButton
+            // 
+            this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(77)))), ((int)(((byte)(97)))));
+            this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.searchButton.ForeColor = System.Drawing.Color.Snow;
+            this.searchButton.Location = new System.Drawing.Point(229, 90);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(121, 29);
+            this.searchButton.TabIndex = 1;
+            this.searchButton.Text = "search";
+            this.searchButton.UseVisualStyleBackColor = false;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(67, 42);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(446, 30);
+            this.searchTextBox.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.ClientSize = new System.Drawing.Size(816, 451);
+            this.Controls.Add(this.searchGroupBox);
             this.Controls.Add(this.sportsmanGridView);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -266,6 +314,8 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanGridView)).EndInit();
+            this.searchGroupBox.ResumeLayout(false);
+            this.searchGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +346,8 @@
         private DataGridViewTextBoxColumn teamDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn personalRecordDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn recordsmanDataGridViewTextBoxColumn;
+        private GroupBox searchGroupBox;
+        private TextBox searchTextBox;
+        private Button searchButton;
     }
 }

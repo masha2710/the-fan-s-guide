@@ -106,5 +106,12 @@ namespace the_fan_s_guide.Forms
                     break;
             }
         }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            
+            List<Sportsman> res = sportbase.SearchSportsmen(searchTextBox.Text); 
+            sportsmanBindingSource.DataSource = res;
+        }
     }
 }
