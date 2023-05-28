@@ -48,6 +48,19 @@ namespace the_fan_s_guide.Models
             }
             return res;
         }
+
+        internal List<Sportsman> SearchRecordsman(string sportLine)
+        {
+            List<Sportsman> recordsmanRes = new List<Sportsman>();
+            foreach (Sportsman sportsman in Sportsmen)
+            {
+                if(sportsman.Sport.ToLower()== sportLine.ToLower() && sportsman.Recordsman.ToLower() == "yes")
+                {
+                    recordsmanRes.Add(sportsman);
+                }
+            }
+            return recordsmanRes;
+        }
     } 
 }
 

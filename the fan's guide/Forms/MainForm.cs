@@ -113,5 +113,29 @@ namespace the_fan_s_guide.Forms
             List<Sportsman> res = sportbase.SearchSportsmen(searchTextBox.Text); 
             sportsmanBindingSource.DataSource = res;
         }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var selectedRow = sportsmanGridView.CurrentRow;
+            if (selectedRow == null)
+            {
+                return;
+            }
+            var selectedSportsman = selectedRow.DataBoundItem as Sportsman;
+
+            if (selectedSportsman == null)
+            {
+                return;
+            }
+
+            sportsmanBindingSource.Remove(selectedSportsman);
+            sportbase.Changed = true;
+        }
+
+        private void recordsmanButton_Click(object sender, EventArgs e)
+        {
+            List<Sportsman> recordsmanRes = sportbase.SearchRecordsman(searchTextBox.Text);
+            sportsmanBindingSource.DataSource = recordsmanRes;
+        }
     }
 }

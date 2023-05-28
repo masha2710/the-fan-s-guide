@@ -39,6 +39,7 @@
             this.sportsmenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sportsmanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sportsmanGridView = new System.Windows.Forms.DataGridView();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +54,7 @@
             this.searchGroupBox = new System.Windows.Forms.GroupBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.recordsmanButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanGridView)).BeginInit();
@@ -89,7 +91,7 @@
             // 
             this.saveToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -97,7 +99,7 @@
             // 
             this.loadToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
@@ -105,7 +107,7 @@
             // 
             this.clearToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
@@ -114,13 +116,13 @@
             this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(130, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(133, 28);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -128,7 +130,8 @@
             // 
             this.sportsmenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem,
-            this.editToolStripMenuItem});
+            this.editToolStripMenuItem,
+            this.deleteToolStripMenuItem});
             this.sportsmenToolStripMenuItem.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.sportsmenToolStripMenuItem.Name = "sportsmenToolStripMenuItem";
             this.sportsmenToolStripMenuItem.Size = new System.Drawing.Size(106, 27);
@@ -138,7 +141,7 @@
             // 
             this.addToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(143, 28);
             this.addToolStripMenuItem.Text = "Add";
             this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
@@ -146,9 +149,17 @@
             // 
             this.editToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(143, 28);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(143, 28);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // sportsmanBindingSource
             // 
@@ -266,6 +277,7 @@
             // 
             // searchGroupBox
             // 
+            this.searchGroupBox.Controls.Add(this.recordsmanButton);
             this.searchGroupBox.Controls.Add(this.searchButton);
             this.searchGroupBox.Controls.Add(this.searchTextBox);
             this.searchGroupBox.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -281,9 +293,9 @@
             this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(77)))), ((int)(((byte)(97)))));
             this.searchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.searchButton.ForeColor = System.Drawing.Color.Snow;
-            this.searchButton.Location = new System.Drawing.Point(229, 90);
+            this.searchButton.Location = new System.Drawing.Point(333, 90);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(121, 29);
+            this.searchButton.Size = new System.Drawing.Size(141, 29);
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "search";
             this.searchButton.UseVisualStyleBackColor = false;
@@ -295,6 +307,16 @@
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(446, 30);
             this.searchTextBox.TabIndex = 0;
+            // 
+            // recordsmanButton
+            // 
+            this.recordsmanButton.Location = new System.Drawing.Point(94, 90);
+            this.recordsmanButton.Name = "recordsmanButton";
+            this.recordsmanButton.Size = new System.Drawing.Size(157, 29);
+            this.recordsmanButton.TabIndex = 2;
+            this.recordsmanButton.Text = "find recordsman";
+            this.recordsmanButton.UseVisualStyleBackColor = true;
+            this.recordsmanButton.Click += new System.EventHandler(this.recordsmanButton_Click);
             // 
             // MainForm
             // 
@@ -349,5 +371,7 @@
         private GroupBox searchGroupBox;
         private TextBox searchTextBox;
         private Button searchButton;
+        private ToolStripMenuItem deleteToolStripMenuItem;
+        private Button recordsmanButton;
     }
 }
