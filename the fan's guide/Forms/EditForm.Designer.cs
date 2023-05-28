@@ -97,14 +97,14 @@
             this.nationalityTextBox.Location = new System.Drawing.Point(238, 156);
             this.nationalityTextBox.Name = "nationalityTextBox";
             this.nationalityTextBox.Size = new System.Drawing.Size(456, 27);
-            this.nationalityTextBox.TabIndex = 20;
+            this.nationalityTextBox.TabIndex = 3;
             // 
             // firstNameTextBox
             // 
             this.firstNameTextBox.Location = new System.Drawing.Point(238, 26);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(456, 27);
-            this.firstNameTextBox.TabIndex = 19;
+            this.firstNameTextBox.TabIndex = 0;
             // 
             // heightLabel
             // 
@@ -129,14 +129,14 @@
             this.lastNameTextBox.Location = new System.Drawing.Point(238, 70);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(456, 27);
-            this.lastNameTextBox.TabIndex = 0;
+            this.lastNameTextBox.TabIndex = 1;
             // 
             // cancelButton
             // 
             this.cancelButton.Location = new System.Drawing.Point(475, 409);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(94, 29);
-            this.cancelButton.TabIndex = 9;
+            this.cancelButton.TabIndex = 10;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
             // 
@@ -145,7 +145,7 @@
             this.okButton.Location = new System.Drawing.Point(600, 409);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(94, 29);
-            this.okButton.TabIndex = 8;
+            this.okButton.TabIndex = 9;
             this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = true;
             // 
@@ -208,42 +208,42 @@
             this.recordsmanTextBox.Location = new System.Drawing.Point(238, 370);
             this.recordsmanTextBox.Name = "recordsmanTextBox";
             this.recordsmanTextBox.Size = new System.Drawing.Size(456, 27);
-            this.recordsmanTextBox.TabIndex = 7;
+            this.recordsmanTextBox.TabIndex = 8;
             // 
             // persRecordTextBox
             // 
             this.persRecordTextBox.Location = new System.Drawing.Point(238, 325);
             this.persRecordTextBox.Name = "persRecordTextBox";
             this.persRecordTextBox.Size = new System.Drawing.Size(456, 27);
-            this.persRecordTextBox.TabIndex = 6;
+            this.persRecordTextBox.TabIndex = 7;
             // 
             // teamTextBox
             // 
             this.teamTextBox.Location = new System.Drawing.Point(238, 283);
             this.teamTextBox.Name = "teamTextBox";
             this.teamTextBox.Size = new System.Drawing.Size(456, 27);
-            this.teamTextBox.TabIndex = 5;
+            this.teamTextBox.TabIndex = 6;
             // 
             // sportTextBox
             // 
             this.sportTextBox.Location = new System.Drawing.Point(238, 241);
             this.sportTextBox.Name = "sportTextBox";
             this.sportTextBox.Size = new System.Drawing.Size(456, 27);
-            this.sportTextBox.TabIndex = 4;
+            this.sportTextBox.TabIndex = 5;
             // 
             // heightTextBox
             // 
             this.heightTextBox.Location = new System.Drawing.Point(238, 199);
             this.heightTextBox.Name = "heightTextBox";
             this.heightTextBox.Size = new System.Drawing.Size(456, 27);
-            this.heightTextBox.TabIndex = 3;
+            this.heightTextBox.TabIndex = 4;
             // 
             // citizenshipTextBox
             // 
             this.citizenshipTextBox.Location = new System.Drawing.Point(238, 113);
             this.citizenshipTextBox.Name = "citizenshipTextBox";
             this.citizenshipTextBox.Size = new System.Drawing.Size(456, 27);
-            this.citizenshipTextBox.TabIndex = 1;
+            this.citizenshipTextBox.TabIndex = 2;
             // 
             // EditForm
             // 

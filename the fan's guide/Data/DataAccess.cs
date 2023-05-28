@@ -16,13 +16,17 @@ namespace the_fan_s_guide.Data
             string jsonString = JsonSerializer.Serialize(sportbase.Sportsmen);
 
             File.WriteAllText(DATA_PATH, jsonString);
+            sportbase.Changed = false;
         }
 
         public static void Load(SportBase sportbase)
         {
             string jsonString = File.ReadAllText(DATA_PATH);
 
-            sportbase.Sportsmen = JsonSerializer.Deserialize<List<Sportsman>>(jsonString);
+            var newSportsmen = JsonSerializer.Deserialize<List<Sportsman>>(jsonString);
+            sportbase.Sportsmen.Clear();
+            sportbase.Sportsmen.AddRange(newSportsmen);
+            sportbase.Changed = false;
         }
 
     }

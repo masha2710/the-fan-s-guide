@@ -8,6 +8,7 @@ namespace the_fan_s_guide.Models
 {
     public class SportBase
     {
+        public bool Changed { get; set; }
         public SportBase()
         {
 
@@ -32,6 +33,7 @@ namespace the_fan_s_guide.Models
                 };
                 Sportsmen.Add(sportsman);
             }
+            Changed = true;
         }
     } 
 }

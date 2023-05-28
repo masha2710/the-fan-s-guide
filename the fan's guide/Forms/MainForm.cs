@@ -54,6 +54,7 @@ namespace the_fan_s_guide.Forms
             {
                 sportbase.Sportsmen.Add(form.Sportsman);
                 sportsmanBindingSource.ResetBindings(true);
+                sportbase.Changed = true;
             }
         }
 
@@ -76,8 +77,34 @@ namespace the_fan_s_guide.Forms
             if(form.ShowDialog() == DialogResult.OK)
             {
                 sportsmanBindingSource.ResetBindings(true);
+                sportbase.Changed = true;
             }
 
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!sportbase.Changed)
+            {
+                return;
+            }
+            var result = MessageBox.Show("Do you want to save changes?", "Сonfirmation", MessageBoxButtons.YesNoCancel);
+            switch (result)
+            {
+                case DialogResult.Yes:
+                    DataAccess.Save(sportbase);
+                    break;
+                case DialogResult.No:
+                    break;
+                case DialogResult.Cancel:
+                    e.Cancel = true;
+                    break;
+            }
         }
     }
 }
