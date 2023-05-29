@@ -81,7 +81,7 @@
             this.addformGroupBox.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addformGroupBox.Location = new System.Drawing.Point(-5, 1);
             this.addformGroupBox.Name = "addformGroupBox";
-            this.addformGroupBox.Size = new System.Drawing.Size(803, 454);
+            this.addformGroupBox.Size = new System.Drawing.Size(803, 467);
             this.addformGroupBox.TabIndex = 1;
             this.addformGroupBox.TabStop = false;
             this.addformGroupBox.Text = "Edit information about sportsman";
@@ -269,9 +269,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 463);
             this.Controls.Add(this.addformGroupBox);
+            this.MaximumSize = new System.Drawing.Size(1197, 670);
+            this.MinimumSize = new System.Drawing.Size(579, 452);
             this.Name = "EditForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditForm";
             this.addformGroupBox.ResumeLayout(false);
             this.addformGroupBox.PerformLayout();

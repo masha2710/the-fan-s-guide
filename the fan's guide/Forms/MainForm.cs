@@ -19,7 +19,7 @@ namespace the_fan_s_guide.Forms
         {
             InitializeComponent();
             sportbase = new SportBase();
-            sportbase.TestData(100);
+            //sportbase.TestData(100);
             sportsmanBindingSource.DataSource = sportbase.Sportsmen;
         }
 
@@ -30,7 +30,16 @@ namespace the_fan_s_guide.Forms
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataAccess.Save(sportbase);
+            var saveRes = MessageBox.Show("Do you want to save information?", "Confirmation", MessageBoxButtons.YesNo);
+            if (saveRes == DialogResult.Yes)
+            {
+                DataAccess.Save(sportbase);
+            }
+            if(saveRes== DialogResult.No)
+            {
+                return;
+            }
+            
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,8 +51,18 @@ namespace the_fan_s_guide.Forms
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sportbase.Sportsmen.Clear();
-            sportsmanBindingSource.ResetBindings(true);
+            var clearRes = MessageBox.Show("Are you sure you want to clear all information?", "Confirmation", MessageBoxButtons.YesNo);
+           if(DialogResult.Yes == clearRes)
+            {
+                sportbase.Sportsmen.Clear();
+                sportsmanBindingSource.ResetBindings(true);
+                sportbase.Changed = true;
+            }
+           if(DialogResult== DialogResult.No)
+            {
+                return;
+            }
+            
         }
 
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
@@ -127,9 +146,16 @@ namespace the_fan_s_guide.Forms
             {
                 return;
             }
-
-            sportsmanBindingSource.Remove(selectedSportsman);
-            sportbase.Changed = true;
+            var result = MessageBox.Show("Are you sure you want to delete this sportsman?", "Сonfirmation", MessageBoxButtons.YesNo);
+            switch (result)
+            {
+                case DialogResult.Yes:
+                    sportsmanBindingSource.Remove(selectedSportsman);
+                    sportbase.Changed = true;
+                    break;
+                case DialogResult.No:
+                    break;
+            }
         }
 
         private void recordsmanButton_Click(object sender, EventArgs e)

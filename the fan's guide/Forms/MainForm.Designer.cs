@@ -52,9 +52,9 @@
             this.personalRecordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recordsmanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchGroupBox = new System.Windows.Forms.GroupBox();
+            this.recordsmanButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchTextBox = new System.Windows.Forms.TextBox();
-            this.recordsmanButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sportsmanGridView)).BeginInit();
@@ -70,7 +70,7 @@
             this.sportsmenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(816, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(766, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -191,7 +191,7 @@
             this.sportsmanGridView.ReadOnly = true;
             this.sportsmanGridView.RowHeadersWidth = 51;
             this.sportsmanGridView.RowTemplate.Height = 29;
-            this.sportsmanGridView.Size = new System.Drawing.Size(816, 265);
+            this.sportsmanGridView.Size = new System.Drawing.Size(766, 223);
             this.sportsmanGridView.TabIndex = 2;
             // 
             // firstNameDataGridViewTextBoxColumn
@@ -277,16 +277,31 @@
             // 
             // searchGroupBox
             // 
+            this.searchGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.searchGroupBox.Controls.Add(this.recordsmanButton);
             this.searchGroupBox.Controls.Add(this.searchButton);
             this.searchGroupBox.Controls.Add(this.searchTextBox);
             this.searchGroupBox.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.searchGroupBox.Location = new System.Drawing.Point(19, 43);
             this.searchGroupBox.Name = "searchGroupBox";
-            this.searchGroupBox.Size = new System.Drawing.Size(535, 125);
+            this.searchGroupBox.Size = new System.Drawing.Size(727, 125);
             this.searchGroupBox.TabIndex = 3;
             this.searchGroupBox.TabStop = false;
             this.searchGroupBox.Text = "Search ";
+            // 
+            // recordsmanButton
+            // 
+            this.recordsmanButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(77)))), ((int)(((byte)(97)))));
+            this.recordsmanButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.recordsmanButton.ForeColor = System.Drawing.Color.Snow;
+            this.recordsmanButton.Location = new System.Drawing.Point(94, 90);
+            this.recordsmanButton.Name = "recordsmanButton";
+            this.recordsmanButton.Size = new System.Drawing.Size(157, 29);
+            this.recordsmanButton.TabIndex = 2;
+            this.recordsmanButton.Text = "find recordsman";
+            this.recordsmanButton.UseVisualStyleBackColor = false;
+            this.recordsmanButton.Click += new System.EventHandler(this.recordsmanButton_Click);
             // 
             // searchButton
             // 
@@ -308,27 +323,20 @@
             this.searchTextBox.Size = new System.Drawing.Size(446, 30);
             this.searchTextBox.TabIndex = 0;
             // 
-            // recordsmanButton
-            // 
-            this.recordsmanButton.Location = new System.Drawing.Point(94, 90);
-            this.recordsmanButton.Name = "recordsmanButton";
-            this.recordsmanButton.Size = new System.Drawing.Size(157, 29);
-            this.recordsmanButton.TabIndex = 2;
-            this.recordsmanButton.Text = "find recordsman";
-            this.recordsmanButton.UseVisualStyleBackColor = true;
-            this.recordsmanButton.Click += new System.EventHandler(this.recordsmanButton_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(228)))), ((int)(((byte)(219)))));
-            this.ClientSize = new System.Drawing.Size(816, 451);
+            this.ClientSize = new System.Drawing.Size(766, 405);
             this.Controls.Add(this.searchGroupBox);
             this.Controls.Add(this.sportsmanGridView);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(1197, 670);
+            this.MinimumSize = new System.Drawing.Size(579, 452);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);

@@ -81,7 +81,7 @@
             this.addformGroupBox.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.addformGroupBox.Location = new System.Drawing.Point(-4, 2);
             this.addformGroupBox.Name = "addformGroupBox";
-            this.addformGroupBox.Size = new System.Drawing.Size(806, 448);
+            this.addformGroupBox.Size = new System.Drawing.Size(854, 448);
             this.addformGroupBox.TabIndex = 0;
             this.addformGroupBox.TabStop = false;
             this.addformGroupBox.Text = "Add information about sportsman";
@@ -98,16 +98,22 @@
             // 
             // nationalityTextBox
             // 
+            this.nationalityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nationalityTextBox.Location = new System.Drawing.Point(238, 156);
             this.nationalityTextBox.Name = "nationalityTextBox";
-            this.nationalityTextBox.Size = new System.Drawing.Size(456, 30);
+            this.nationalityTextBox.Size = new System.Drawing.Size(504, 30);
             this.nationalityTextBox.TabIndex = 3;
             // 
             // firstNameTextBox
             // 
+            this.firstNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firstNameTextBox.Location = new System.Drawing.Point(238, 26);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(456, 30);
+            this.firstNameTextBox.Size = new System.Drawing.Size(504, 30);
             this.firstNameTextBox.TabIndex = 0;
             // 
             // heightLabel
@@ -132,9 +138,12 @@
             // 
             // lastNameTextBox
             // 
+            this.lastNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lastNameTextBox.Location = new System.Drawing.Point(238, 70);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(456, 30);
+            this.lastNameTextBox.Size = new System.Drawing.Size(504, 30);
             this.lastNameTextBox.TabIndex = 1;
             // 
             // cancelButton
@@ -225,53 +234,74 @@
             // 
             // recordsmanTextBox
             // 
+            this.recordsmanTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.recordsmanTextBox.Location = new System.Drawing.Point(238, 370);
             this.recordsmanTextBox.Name = "recordsmanTextBox";
-            this.recordsmanTextBox.Size = new System.Drawing.Size(456, 30);
+            this.recordsmanTextBox.Size = new System.Drawing.Size(504, 30);
             this.recordsmanTextBox.TabIndex = 8;
             // 
             // persRecordTextBox
             // 
+            this.persRecordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.persRecordTextBox.Location = new System.Drawing.Point(238, 325);
             this.persRecordTextBox.Name = "persRecordTextBox";
-            this.persRecordTextBox.Size = new System.Drawing.Size(456, 30);
+            this.persRecordTextBox.Size = new System.Drawing.Size(504, 30);
             this.persRecordTextBox.TabIndex = 7;
             // 
             // teamTextBox
             // 
+            this.teamTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.teamTextBox.Location = new System.Drawing.Point(238, 283);
             this.teamTextBox.Name = "teamTextBox";
-            this.teamTextBox.Size = new System.Drawing.Size(456, 30);
+            this.teamTextBox.Size = new System.Drawing.Size(504, 30);
             this.teamTextBox.TabIndex = 6;
             // 
             // sportTextBox
             // 
+            this.sportTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sportTextBox.Location = new System.Drawing.Point(238, 241);
             this.sportTextBox.Name = "sportTextBox";
-            this.sportTextBox.Size = new System.Drawing.Size(456, 30);
+            this.sportTextBox.Size = new System.Drawing.Size(504, 30);
             this.sportTextBox.TabIndex = 5;
             // 
             // heightTextBox
             // 
+            this.heightTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.heightTextBox.Location = new System.Drawing.Point(238, 199);
             this.heightTextBox.Name = "heightTextBox";
-            this.heightTextBox.Size = new System.Drawing.Size(456, 30);
+            this.heightTextBox.Size = new System.Drawing.Size(504, 30);
             this.heightTextBox.TabIndex = 4;
             // 
             // citizenshipTextBox
             // 
+            this.citizenshipTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.citizenshipTextBox.Location = new System.Drawing.Point(238, 113);
             this.citizenshipTextBox.Name = "citizenshipTextBox";
-            this.citizenshipTextBox.Size = new System.Drawing.Size(456, 30);
+            this.citizenshipTextBox.Size = new System.Drawing.Size(504, 30);
             this.citizenshipTextBox.TabIndex = 2;
             // 
             // AddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(848, 450);
             this.Controls.Add(this.addformGroupBox);
+            this.MaximumSize = new System.Drawing.Size(1197, 670);
+            this.MinimumSize = new System.Drawing.Size(579, 452);
             this.Name = "AddForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddForm";
             this.addformGroupBox.ResumeLayout(false);
             this.addformGroupBox.PerformLayout();

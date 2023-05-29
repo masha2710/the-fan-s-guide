@@ -27,7 +27,7 @@ namespace the_fan_s_guide.Forms
             lastNameTextBox.Text = sportsman.LastName;
             citizenshipTextBox.Text = sportsman.Citizenship;
             nationalityTextBox.Text = sportsman.Nationality;
-            heightTextBox.Text = sportsman.Height;
+            heightTextBox.Text = sportsman.Height.ToString();
             sportTextBox.Text = sportsman.Sport;
             teamTextBox.Text = sportsman.Team;
             persRecordTextBox.Text = sportsman.PersonalRecord;
@@ -46,12 +46,20 @@ namespace the_fan_s_guide.Forms
             Sportsman.LastName = lastNameTextBox.Text;
             Sportsman.Citizenship = citizenshipTextBox.Text;
             Sportsman.Nationality = nationalityTextBox.Text;
-            Sportsman.Height = heightTextBox.Text;
+            Sportsman.Height = Convert.ToInt32(heightTextBox.Text);
             Sportsman.Sport = sportTextBox.Text;
             Sportsman.Team = teamTextBox.Text;
             Sportsman.PersonalRecord = persRecordTextBox.Text;
             Sportsman.Recordsman = recordsmanTextBox.Text;
-            DialogResult = DialogResult.OK;
+            var editRes = MessageBox.Show("Are you sure you want to edit information?", "Confirmation", MessageBoxButtons.YesNo);
+            if (editRes == DialogResult.Yes)
+            {
+                DialogResult = DialogResult.OK;
+            }
+            if (editRes == DialogResult.No)
+            {
+                return;
+            }
         }
 
         private void cancelButton_Click_1(object sender, EventArgs e)

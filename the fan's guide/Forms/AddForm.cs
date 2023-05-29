@@ -44,13 +44,21 @@ namespace the_fan_s_guide.Forms
                 LastName = lastNameTextBox.Text,
                 Citizenship = citizenshipTextBox.Text,
                 Nationality = nationalityTextBox.Text,
-                Height = heightTextBox.Text,
+                Height = Convert.ToInt32(heightTextBox.Text),
                 Sport = sportTextBox.Text,
                 Team = teamTextBox.Text,
                 PersonalRecord = persRecordTextBox.Text,
                 Recordsman = recordsmanTextBox.Text,
             };
-            this.DialogResult = DialogResult.OK;
+            var addRes = MessageBox.Show("Are you sure you want to add this sportsman?", "Confirmation", MessageBoxButtons.YesNo);
+            if (addRes == DialogResult.Yes)
+            {
+                DialogResult = DialogResult.OK;
+            }
+            if(addRes== DialogResult.No)
+            {
+                return;
+            }
         }
 
 

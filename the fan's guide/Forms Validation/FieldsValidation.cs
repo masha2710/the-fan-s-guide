@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using the_fan_s_guide.Models;
 
 namespace the_fan_s_guide.Forms_Validation
 {
@@ -11,34 +12,34 @@ namespace the_fan_s_guide.Forms_Validation
        public static string GetProblemMessage(string firstName, string lastName, string citizenship, string nationality, string height, string sport, string recordsman)
         {
             var problemMessage = "";
-            if(string.IsNullOrEmpty(firstName) || !OnlyLetters(firstName))
+            if(string.IsNullOrEmpty(firstName) || !OnlyLetters(firstName) || firstName.Length>50)
             {
-                problemMessage += "First name cannot be empty and must contain only letters!.\n";
+                problemMessage += "First name cannot be empty and must contain only less than 50 letters!.\n";
             }
-            if (string.IsNullOrEmpty(lastName) || !OnlyLetters(lastName))
+            if (string.IsNullOrEmpty(lastName) || !OnlyLetters(lastName) || lastName.Length>50)
             {
-                problemMessage += "Last name cannot be empty and must contain only letters!.\n";
-            }
-
-            if (string.IsNullOrEmpty(citizenship) || !OnlyLetters(citizenship))
-            {
-                problemMessage += "Citizenship cannot be empty and must contain only letters!\n";
+                problemMessage += "Last name cannot be empty and must contain only less than 50 letters!.\n";
             }
 
-            if (string.IsNullOrEmpty(nationality) || !OnlyLetters(nationality))
+            if (string.IsNullOrEmpty(citizenship) || !OnlyLetters(citizenship) || citizenship.Length>50 )
             {
-                problemMessage += "Nationality cannot be empty and must contain only letters!\n";
+                problemMessage += "Citizenship cannot be empty and must contain only less than 50 letters!\n";
+            }
+
+            if (string.IsNullOrEmpty(nationality) || !OnlyLetters(nationality) || nationality.Length>50)
+            {
+                problemMessage += "Nationality cannot be empty and must contain only less than 50 letters!\n";
             }
 
             bool heightOk = int.TryParse(height, out int parsedHeight);
-            if (!heightOk || parsedHeight <= 0)
+            if (!heightOk || parsedHeight <= 0 || height.Length >= 4)
             {
-                problemMessage += "Height must by a positive number.\n";
+                problemMessage += "Height must by a positive number and must contain only less than 4 symbols.\n";
             }
 
-            if (string.IsNullOrEmpty(sport) || !OnlyLetters(sport))
+            if (string.IsNullOrEmpty(sport) || !OnlyLetters(sport) || sport.Length>50)
             {
-                problemMessage += "Kind of sport cannot be empty and must contain only letters!\n";
+                problemMessage += "Kind of sport cannot be empty and must contain only less than 50 letters!\n";
             }
 
             if (string.IsNullOrEmpty(recordsman) || !YesorNo(recordsman))
@@ -51,7 +52,7 @@ namespace the_fan_s_guide.Forms_Validation
         {
             foreach (char i in info)
             {
-                if (!char.IsLetter(i))
+                if ((!char.IsLetter(i)) && i != '-')
                 {
                     return false;
                 }
@@ -71,6 +72,7 @@ namespace the_fan_s_guide.Forms_Validation
             }
             return false;
         }
+
     }
 }
 
