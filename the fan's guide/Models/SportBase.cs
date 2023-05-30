@@ -17,7 +17,7 @@ namespace the_fan_s_guide.Models
         //public void TestData(int k)
         //{
         //    Sportsmen = new List<Sportsman>();
-        //    for(int i = 0; i < k; i++)
+        //    for (int i = 0; i < k; i++)
         //    {
         //        var sportsman = new Sportsman
         //        {

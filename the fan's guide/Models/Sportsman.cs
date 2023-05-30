@@ -16,6 +16,6 @@ namespace the_fan_s_guide.Models
         public string Sport { get; set; }
         public string Team { get; set; }
         public string PersonalRecord { get; set; }
-        public string Recordsman { get; set; }
+        public string Recordsman { get; set; }  
     }
 }

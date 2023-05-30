@@ -25,7 +25,9 @@ namespace the_fan_s_guide.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            DataAccess.Load(sportbase);
+            sportsmanBindingSource.ResetBindings(true);
+            sportsmanBindingSource.DataSource = sportbase.Sportsmen;
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)

@@ -32,7 +32,7 @@ namespace the_fan_s_guide.Forms
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            string problemMessage = FieldsValidation.GetProblemMessage(firstNameTextBox.Text, lastNameTextBox.Text, citizenshipTextBox.Text, nationalityTextBox.Text, heightTextBox.Text, sportTextBox.Text, recordsmanTextBox.Text);
+            string problemMessage = FieldsValidation.GetProblemMessage(firstNameTextBox.Text, lastNameTextBox.Text, citizenshipTextBox.Text, nationalityTextBox.Text, heightTextBox.Text, sportTextBox.Text,teamTextBox.Text,persRecordTextBox.Text, recordsmanTextBox.Text);
             if (problemMessage != "")
             {
                 MessageBox.Show(problemMessage, "Problems:");
@@ -60,7 +60,6 @@ namespace the_fan_s_guide.Forms
                 return;
             }
         }
-
 
     }
 }

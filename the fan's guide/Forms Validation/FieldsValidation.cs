@@ -9,10 +9,10 @@ namespace the_fan_s_guide.Forms_Validation
 {
     public static class FieldsValidation
     {
-       public static string GetProblemMessage(string firstName, string lastName, string citizenship, string nationality, string height, string sport, string recordsman)
+       public static string GetProblemMessage(string firstName, string lastName, string citizenship, string nationality, string height, string sport,string team, string persRecord, string recordsman)
         {
             var problemMessage = "";
-            if(string.IsNullOrEmpty(firstName) || !OnlyLetters(firstName) || firstName.Length>50)
+            if(string.IsNullOrWhiteSpace(firstName) || !OnlyLetters(firstName) || firstName.Length>50 && firstName.Length<1)
             {
                 problemMessage += "First name cannot be empty and must contain only less than 50 letters!.\n";
             }
@@ -21,7 +21,7 @@ namespace the_fan_s_guide.Forms_Validation
                 problemMessage += "Last name cannot be empty and must contain only less than 50 letters!.\n";
             }
 
-            if (string.IsNullOrEmpty(citizenship) || !OnlyLetters(citizenship) || citizenship.Length>50 )
+            if (citizenship.Length>50 )
             {
                 problemMessage += "Citizenship cannot be empty and must contain only less than 50 letters!\n";
             }
@@ -40,6 +40,16 @@ namespace the_fan_s_guide.Forms_Validation
             if (string.IsNullOrEmpty(sport) || !OnlyLetters(sport) || sport.Length>50)
             {
                 problemMessage += "Kind of sport cannot be empty and must contain only less than 50 letters!\n";
+            }
+
+            if(team.Length > 100)
+            {
+                problemMessage += "Team must only contain less than 100 symbols!";
+            }
+
+            if (persRecord.Length > 100)
+            {
+                problemMessage += "Personal record must only contain less than 100 symbols!";
             }
 
             if (string.IsNullOrEmpty(recordsman) || !YesorNo(recordsman))
