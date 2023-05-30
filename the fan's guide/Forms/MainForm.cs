@@ -135,12 +135,7 @@ namespace the_fan_s_guide.Forms
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var selectedRow = sportsmanGridView.CurrentRow;
-            if (selectedRow == null)
-            {
-                return;
-            }
-            var selectedSportsman = selectedRow.DataBoundItem as Sportsman;
+            var selectedSportsman = sportsmanBindingSource.Current as Sportsman;
 
             if (selectedSportsman == null)
             {
@@ -156,6 +151,7 @@ namespace the_fan_s_guide.Forms
                 case DialogResult.No:
                     break;
             }
+            sportbase.Changed = true;
         }
 
         private void recordsmanButton_Click(object sender, EventArgs e)
