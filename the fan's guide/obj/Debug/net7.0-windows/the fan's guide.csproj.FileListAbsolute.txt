@@ -1,0 +1,19 @@
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\bin\Debug\net7.0-windows\the fan's guide.exe
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\bin\Debug\net7.0-windows\the fan's guide.deps.json
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\bin\Debug\net7.0-windows\the fan's guide.runtimeconfig.json
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\bin\Debug\net7.0-windows\the fan's guide.dll
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\bin\Debug\net7.0-windows\the fan's guide.pdb
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the fan's guide.csproj.AssemblyReference.cache
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the fan's guide.csproj.GenerateResource.cache
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the fan's guide.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the fan's guide.AssemblyInfoInputs.cache
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the fan's guide.AssemblyInfo.cs
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the fan's guide.csproj.CoreCompileInputs.cache
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the fan's guide.dll
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\refint\the fan's guide.dll
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the fan's guide.pdb
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the fan's guide.genruntimeconfig.cache
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\ref\the fan's guide.dll
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the_fan_s_guide.Forms.MainForm.resources
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the_fan_s_guide.Forms.AddForm.resources
+C:\Users\Мария\Desktop\Курсовая\the fan's guide\the fan's guide\obj\Debug\net7.0-windows\the_fan_s_guide.Forms.EditForm.resources
