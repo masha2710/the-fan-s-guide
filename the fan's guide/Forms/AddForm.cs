@@ -55,7 +55,7 @@ namespace the_fan_s_guide.Forms
             {
                 DialogResult = DialogResult.OK;
             }
-            if(addRes== DialogResult.No)
+            if (addRes== DialogResult.No)
             {
                 return;
             }

@@ -37,7 +37,7 @@ namespace the_fan_s_guide.Forms
             {
                 DataAccess.Save(sportbase);
             }
-            if(saveRes== DialogResult.No)
+            if (saveRes== DialogResult.No)
             {
                 return;
             }
@@ -54,13 +54,13 @@ namespace the_fan_s_guide.Forms
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var clearRes = MessageBox.Show("Are you sure you want to clear all information?", "Confirmation", MessageBoxButtons.YesNo);
-           if(DialogResult.Yes == clearRes)
+           if (DialogResult.Yes == clearRes)
             {
                 sportbase.Sportsmen.Clear();
                 sportsmanBindingSource.ResetBindings(true);
                 sportbase.Changed = true;
             }
-           if(DialogResult== DialogResult.No)
+           if (DialogResult== DialogResult.No)
             {
                 return;
             }
@@ -71,7 +71,7 @@ namespace the_fan_s_guide.Forms
         {
             var form = new AddForm(sportbase);
             var dialogResult = form.ShowDialog();
-            if(dialogResult == DialogResult.OK)
+            if (dialogResult == DialogResult.OK)
             {
                 sportbase.Sportsmen.Add(form.Sportsman);
                 sportsmanBindingSource.ResetBindings(true);
@@ -95,7 +95,7 @@ namespace the_fan_s_guide.Forms
             }
 
             var form = new EditForm(selectedSportsman);
-            if(form.ShowDialog() == DialogResult.OK)
+            if (form.ShowDialog() == DialogResult.OK)
             {
                 sportsmanBindingSource.ResetBindings(true);
                 sportbase.Changed = true;

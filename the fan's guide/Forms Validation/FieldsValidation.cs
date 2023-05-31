@@ -9,10 +9,11 @@ namespace the_fan_s_guide.Forms_Validation
 {
     public static class FieldsValidation
     {
-       public static string GetProblemMessage(string firstName, string lastName, string citizenship, string nationality, string height, string sport,string team, string persRecord, string recordsman)
+       public static string GetProblemMessage(string firstName, string lastName, string citizenship, string nationality,
+           string height, string sport,string team, string persRecord, string recordsman)
         {
             var problemMessage = "";
-            if(string.IsNullOrWhiteSpace(firstName) || !OnlyLetters(firstName) || firstName.Length>50 && firstName.Length<1)
+            if (string.IsNullOrEmpty(firstName) || !OnlyLetters(firstName) || firstName.Length>50 && firstName.Length<1)
             {
                 problemMessage += "First name cannot be empty and must contain only less than 50 letters!.\n";
             }
@@ -42,7 +43,7 @@ namespace the_fan_s_guide.Forms_Validation
                 problemMessage += "Kind of sport cannot be empty and must contain only less than 50 letters!\n";
             }
 
-            if(team.Length > 100)
+            if (team.Length > 100)
             {
                 problemMessage += "Team must only contain less than 100 symbols!";
             }
@@ -58,6 +59,7 @@ namespace the_fan_s_guide.Forms_Validation
             }
             return problemMessage;
         }
+
         public static bool OnlyLetters(string info)
         {
             foreach (char i in info)
@@ -69,6 +71,7 @@ namespace the_fan_s_guide.Forms_Validation
             }
             return true;
         }
+
         public static bool YesorNo(string input)
         {
             string lowerInput = input.ToLower();
