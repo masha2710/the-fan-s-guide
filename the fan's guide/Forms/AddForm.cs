@@ -32,7 +32,9 @@ namespace the_fan_s_guide.Forms
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            string problemMessage = FieldsValidation.GetProblemMessage(firstNameTextBox.Text, lastNameTextBox.Text, citizenshipTextBox.Text, nationalityTextBox.Text, heightTextBox.Text, sportTextBox.Text,teamTextBox.Text,persRecordTextBox.Text, recordsmanTextBox.Text);
+            string problemMessage = FieldsValidation.GetProblemMessage(firstNameTextBox.Text, lastNameTextBox.Text,
+                citizenshipTextBox.Text, nationalityTextBox.Text, heightTextBox.Text, sportTextBox.Text,teamTextBox.Text,
+                persRecordTextBox.Text, recordsmanTextBox.Text);
             if (problemMessage != "")
             {
                 MessageBox.Show(problemMessage, "Problems:");
@@ -50,11 +52,15 @@ namespace the_fan_s_guide.Forms
                 PersonalRecord = persRecordTextBox.Text,
                 Recordsman = recordsmanTextBox.Text,
             };
-            var addRes = MessageBox.Show("Are you sure you want to add this sportsman?", "Confirmation", MessageBoxButtons.YesNo);
+
+            var addRes = MessageBox.Show("Are you sure you want to add this sportsman?", "Confirmation",
+                MessageBoxButtons.YesNo);
+
             if (addRes == DialogResult.Yes)
             {
                 DialogResult = DialogResult.OK;
             }
+
             if (addRes== DialogResult.No)
             {
                 return;

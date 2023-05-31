@@ -36,7 +36,9 @@ namespace the_fan_s_guide.Forms
 
         private void okButton_Click_1(object sender, EventArgs e)
         {
-            string problemMessage = FieldsValidation.GetProblemMessage(firstNameTextBox.Text, lastNameTextBox.Text, citizenshipTextBox.Text, nationalityTextBox.Text, heightTextBox.Text, sportTextBox.Text,teamTextBox.Text, persRecordTextBox.Text, recordsmanTextBox.Text);
+            string problemMessage = FieldsValidation.GetProblemMessage(firstNameTextBox.Text, lastNameTextBox.Text,
+                citizenshipTextBox.Text, nationalityTextBox.Text, heightTextBox.Text, sportTextBox.Text,teamTextBox.Text,
+                persRecordTextBox.Text, recordsmanTextBox.Text);
             if (problemMessage != "")
             {
                 MessageBox.Show(problemMessage, "Problems:");
@@ -51,7 +53,8 @@ namespace the_fan_s_guide.Forms
             Sportsman.Team = teamTextBox.Text;
             Sportsman.PersonalRecord = persRecordTextBox.Text;
             Sportsman.Recordsman = recordsmanTextBox.Text;
-            var editRes = MessageBox.Show("Are you sure you want to edit information?", "Confirmation", MessageBoxButtons.YesNo);
+            var editRes = MessageBox.Show("Are you sure you want to edit information?", "Confirmation", 
+                MessageBoxButtons.YesNo);
             if (editRes == DialogResult.Yes)
             {
                 DialogResult = DialogResult.OK;
